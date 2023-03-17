@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    background: maroon;
+    height: 80px;
+    width: 100%;
+}
+
+
+label.logo{
+    color: black;
+    font-size: 50px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bolder;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+ a:hover{
+    background: white;
+    transition: 0.3s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: maroon;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .3s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    a:hover{
+        background: none;
+        color: white;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
+
+.section{
+    background-image: url(../Images/movieroll.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100% - 80px);
+}
+h1{
+    font-size: 80px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    
+}
+
+.section .carousel{
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: 60px;
+    margin-right: 60px;
+    scroll-behavior: smooth;
+    
+}
+
+.carousel img{
+    height: 500px;
+    object-fit: cover;
+    width: calc(100%/3);
+    margin-left: 14px;
+
+}
+
+.carousel img:first-child{
+    margin-left: 0px;
+}
+
+.section i{
+    
+    height: 46px;
+    width: 46px;
+    text-align: center;
+    line-height: 46px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    
+}
+
+#first{
+    margin-top: 360px;
+    margin-left: 30px;
+}
+
+#last{
+    margin-left: 94%;
+    margin-top: 360px;
+    
+}
+
+@media screen and (max-width:900px) {
+    .carousel img{
+        width: calc(100%/2);
+    } 
+}
+
+@media screen and (max-width:550px) {
+    .carousel img{
+        width:100%;
+    } 
+}
+
