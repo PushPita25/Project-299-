@@ -107,7 +107,7 @@ nav ul li a{
 }
 
 .section{
-    background-image: url(../Images/movieroll.jpg);
+    background-image: url(../Images/theatre.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: calc(100% - 80px);
